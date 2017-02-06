@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Nginx编码风格 | 技术博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Nginx编码风格一直是我很喜欢的一种，看到tb有团队整理出来了，觉得很不错，就偷偷的搬过来了。
+原文在这里：http://tengine.taobao.org/book/appendix_a.html#nginx-100
+Nginx代码风格图示 (100%)
+一、基本原则    K&amp;amp;R编码风格（偏BSD子类）。    每行不能超过80列。    不用TAB对齐，用空格。    默认对齐单">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx编码风格">
+<meta property="og:url" content="http://guishengx.com/2015/03/06/Nginx编码风格/index.html">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:description" content="Nginx编码风格一直是我很喜欢的一种，看到tb有团队整理出来了，觉得很不错，就偷偷的搬过来了。
+原文在这里：http://tengine.taobao.org/book/appendix_a.html#nginx-100
+Nginx代码风格图示 (100%)
+一、基本原则    K&amp;amp;R编码风格（偏BSD子类）。    每行不能超过80列。    不用TAB对齐，用空格。    默认对齐单">
+<meta property="og:updated_time" content="2017-02-06T14:23:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nginx编码风格">
+<meta name="twitter:description" content="Nginx编码风格一直是我很喜欢的一种，看到tb有团队整理出来了，觉得很不错，就偷偷的搬过来了。
+原文在这里：http://tengine.taobao.org/book/appendix_a.html#nginx-100
+Nginx代码风格图示 (100%)
+一、基本原则    K&amp;amp;R编码风格（偏BSD子类）。    每行不能超过80列。    不用TAB对齐，用空格。    默认对齐单">
+  
+    <link rel="alternate" href="/atom.xml" title="技术博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">技术博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://guishengx.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Nginx编码风格" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/06/Nginx编码风格/" class="article-date">
+  <time datetime="2015-03-06T09:27:06.000Z" itemprop="datePublished">2015-03-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Nginx编码风格
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Nginx编码风格一直是我很喜欢的一种，看到tb有团队整理出来了，觉得很不错，就偷偷的搬过来了。</p>
+<p>原文在这里：<a href="http://tengine.taobao.org/book/appendix_a.html#nginx-100" target="_blank" rel="external">http://tengine.taobao.org/book/appendix_a.html#nginx-100</a></p>
+<p>Nginx代码风格图示 (100%)</p>
+<p>一、基本原则<br>    K&amp;R编码风格（偏BSD子类）。<br>    每行不能超过80列。<br>    不用TAB对齐，用空格。<br>    默认对齐单元是4个空格。<br>    除宏定义外，字母均为小写，单词间用下划线_间隔。<br>    使用C方式的注释，不得使用//形式注释。<br>    中缀运算符的前后须空一格，如3 + 2以及a &gt; 3。</p>
+<p>二、风格图示<br>1、 if/while/for/switch语句的左花括号和关键字在同一行上，和括号之间空一个空格。</p>
+<p>2、 else关键字和两个花括号在同一行上。</p>
+<p>code-style-1</p>
+<p>3、 文件开始的注释空一行。</p>
+<p>4、 较为完整的代码块间的距离为空两行。如函数声明、函数定义之间等。</p>
+<p>5、 函数声明或定义若一行显示不下，则函数原型空4个空格。</p>
+<p>6、 结构体数组的花括号和内容之间空一个空格。</p>
+<p>code-style-2</p>
+<p>7、 结构体数组的左花括号放在同一行上。</p>
+<p>8、 较大的结构体数组元素最开始空一行。</p>
+<p>9、 元素内容上下对齐。</p>
+<p>code-style-3</p>
+<p>10、注释上下对齐。</p>
+<p>code-style-4</p>
+<p>11、函数调用折行时，参数上下对齐。</p>
+<p>code-style-5</p>
+<p>12、函数定义时，类型单独一行。</p>
+<p>13、变量声明的类型上下排列按照从短到长的顺序。注意，最下面的变量的类型和名称间的空格为2-3个。一般情况下为2个，这是Nginx中最小的变量声明中类型和名称的距离。</p>
+<p>14、变量名称上下对齐——字母对齐，不包括指针的*号。</p>
+<p>code-style-6</p>
+<p>15、结构体内变量上下对齐（字母，不包括指针的的*号）。</p>
+<p>code-style-7</p>
+<p>16、单行注释格式为/<em> something </em>/</p>
+<p>code-style-8</p>
+<p>17、多行注释的格式为：</p>
+<p>code-style-9</p>
+<p>18、函数定义的左花括号独占一行。</p>
+<p>19、switch语句中，switch和case关键字上下对齐。</p>
+<p>code-style-10</p>
+<p>20、当条件表达式过长需要折行时，关系运算符须位于下一行的行首，并与上一行的条件表达式的第一个字符对齐，同时右花括号须位于单独的一行，并与if/while等关键字对齐。</p>
+<p>code-style-11</p>
+<p>21、 else语句之前须空出一行。</p>
+<p>code-style-12</p>
+<p>22、在函数中，相同类型的变量声明放在一行上。</p>
+<p>code-style-13</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://guishengx.com/2015/03/06/Nginx编码风格/" data-id="ciyu7ivwy0001pue0kssc2lmv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/03/06/HASH之初见/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          HASH之初见
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/06/my-aticle/">my aticle</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/08/usingNMSSH/">在App中集成NMSSH</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/07/fruitday/">fruitday应用分析</a>
+          </li>
+        
+          <li>
+            <a href="/2015/03/06/HASH之初见/">HASH之初见</a>
+          </li>
+        
+          <li>
+            <a href="/2015/03/06/Nginx编码风格/">Nginx编码风格</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Guisheng<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
