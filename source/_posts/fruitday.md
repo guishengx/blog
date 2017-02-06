@@ -6,6 +6,8 @@ tags:
 ##(1)
 POST http://wapi.fruitday.com/appApi
 
+<!--more-->
+
 request:
 
 ```
